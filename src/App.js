@@ -9,7 +9,7 @@ const App = () => {
     [
       {
       id: 1,
-      name: 'Reading about async', 
+      name: 'Read about async', 
       isComplited: false
      },
       {
@@ -19,7 +19,7 @@ const App = () => {
      },
       {
       id: 3,
-      name: 'Make 100 push-ups', 
+      name: 'Do 100 push-ups', 
       isComplited: false
      }
   ]);
