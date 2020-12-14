@@ -8,8 +8,8 @@ const TodoForm = ({addTodo, newTodo, handleTodoChange}) => {
                      <input type='text' 
                             value = {newTodo}
                             onChange = {handleTodoChange}
-                            placeholder = 'add some todo...'  />
-        <button type='sumbit'>Add Todo</button>                        
+                            placeholder = 'Add a task'  />
+        <button type='sumbit'>Add Task</button>                        
 
         </form>
         </div>

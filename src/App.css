@@ -36,3 +36,7 @@ button {
   text-decoration: line-through;
   cursor: pointer;
 }
+
+.showAlert {
+  color: rgb(241, 72, 72);
+}

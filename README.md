@@ -6,7 +6,7 @@
 
 </div>
 
-## In this project it's not about the styling, it's more about functionality, how React Hooks is working
+## In this project it's not about the styling, it's more about functionality, how React Hooks works
 
 In the project directory, you can run:
 

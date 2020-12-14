@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Todo from './components/Todo/Todo';
 import TodoForm from './components/TodoForm/TodoForm';
+import ShowAlert from './components/showAlert/ShowAlert';
 
 
 const App = () => {
@@ -24,7 +25,9 @@ const App = () => {
      }
   ]);
 
-  const [newTodo, setNewTodo] = useState('');  
+  const [newTodo, setNewTodo] = useState('');    
+  const [showAlert, setShowAlert] = useState(false);  
+  
 
  const addTodo = (event) => {
     event.preventDefault();
@@ -37,16 +40,17 @@ const App = () => {
  
     // check if the input is empty
     if(todoObject.name === ''){
-       alert('Add some activites');
+      setShowAlert(true)
     } else {
       setTodo(todos.concat(todoObject));
+      setShowAlert(false)
     }
-    setNewTodo(''); // clear input field            
+    setNewTodo(''); // clear input field           
   }
   
   
-  const handleTodoChange = (event) => {        
-    setNewTodo(event.target.value);      
+  const handleTodoChange = (event) => {     
+    setNewTodo(event.target.value);   
   }
 
   const deleteTodo = (index) => {   
@@ -64,7 +68,8 @@ const App = () => {
 
   return (
     <div className='App-header'>
-      <h1>Todo App</h1>
+      <h1>To-Do App</h1>
+      {showAlert? <ShowAlert/> : null }    
       <TodoForm addTodo = {addTodo} handleTodoChange = {handleTodoChange} newTodo = {newTodo}/> 
       
       <ul>
